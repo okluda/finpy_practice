@@ -1,0 +1,100 @@
+00-pip
+01-scipy
+02-notebook
+03-pandas
+04-scikit_learn
+05-matplotlib
+06-lxml
+07-requests
+08-beautifulsoup4
+09-selenium
+10-pymysql
+11-sqlalchemy
+12-talib
+13-seaborn
+14-plotly
+15-jupyterlab
+16-statsmodels
+17-mathjax
+18-xlrd
+19-ffn
+===========================================================
+00	01	pip-19.3.1-py2.py3-none-any.whl
+01	01	numpy-1.17.3-cp36-cp36m-win_amd64.whl
+01	02	scipy-1.3.1-cp36-cp36m-win_amd64.whl
+02	01	more_itertools-7.2.0-py3-none-any.whl
+02	02	zipp-0.6.0-py2.py3-none-any.whl
+02	03	wcwidth-0.1.7-py2.py3-none-any.whl
+02	04	six-1.12.0-py2.py3-none-any.whl
+02	05	pyrsistent-0.15.5.tar.gz
+02	06	attrs-19.3.0-py2.py3-none-any.whl
+02	07	importlib_metadata-0.23-py2.py3-none-any.whl
+02	08	webencodings-0.5.1-py2.py3-none-any.whl
+02	09	backcall-0.1.0.tar.gz
+02	10	colorama-0.4.1-py2.py3-none-any.whl
+02	11	pickleshare-0.7.5-py2.py3-none-any.whl
+02	12	prompt_toolkit-2.0.10-py3-none-any.whl
+02	13	jsonschema-3.1.1-py2.py3-none-any.whl
+02	14	decorator-4.4.1-py2.py3-none-any.whl
+02	15	entrypoints-0.3-py2.py3-none-any.whl
+02	16	mistune-0.8.4-py2.py3-none-any.whl
+02	17	pandocfilters-1.4.2.tar.gz
+02	18	defusedxml-0.6.0-py2.py3-none-any.whl
+02	19	Pygments-2.4.2-py2.py3-none-any.whl
+02	20	bleach-3.1.0-py2.py3-none-any.whl
+02	21	testpath-0.4.2-py2.py3-none-any.whl
+02	22	pywinpty-0.5.5-cp36-cp36m-win_amd64.whl
+02	23	python_dateutil-2.8.0-py2.py3-none-any.whl
+02	24	pywin32-225-cp36-cp36m-win_amd64.whl
+02	25	MarkupSafe-1.1.1-cp36-cp36m-win_amd64.whl
+02	26	ipython_genutils-0.2.0-py2.py3-none-any.whl
+02	27	traitlets-4.3.3-py2.py3-none-any.whl
+02	28	jupyter_core-4.6.1-py2.py3-none-any.whl
+02	29	nbformat-4.4.0-py2.py3-none-any.whl
+02	30	pyzmq-18.1.0-cp36-cp36m-win_amd64.whl
+02	31	prometheus_client-0.7.1.tar.gz
+02	32	Send2Trash-1.5.0-py3-none-any.whl
+02	33	Jinja2-2.10.3-py2.py3-none-any.whl
+02	34	nbconvert-5.6.1-py2.py3-none-any.whl
+02	35	tornado-6.0.3-cp36-cp36m-win_amd64.whl
+02	36	jupyter_client-5.3.4-py2.py3-none-any.whl
+02	37	parso-0.5.1-py2.py3-none-any.whl
+02	38	jedi-0.15.1-py2.py3-none-any.whl
+02	39	ipython-7.9.0-py3-none-any.whl
+02	40	ipykernel-5.1.3-py3-none-any.whl
+02	41	terminado-0.8.2-py2.py3-none-any.whl
+02	42	notebook-6.0.1-py3-none-any.whl
+03	01	pytz-2019.3-py2.py3-none-any.whl
+03	02	pandas-0.25.2-cp36-cp36m-win_amd64.whl
+04	01	joblib-0.14.0-py2.py3-none-any.whl
+04	02	scikit_learn-0.21.3-cp36-cp36m-win_amd64.whl
+05	01	cycler-0.10.0-py2.py3-none-any.whl
+05	02	kiwisolver-1.1.0-cp36-none-win_amd64.whl
+05	03	pyparsing-2.4.2-py2.py3-none-any.whl
+05	04	matplotlib-3.1.1-cp36-cp36m-win_amd64.whl
+06	01	lxml-4.4.1-cp36-cp36m-win_amd64.whl
+07	01	certifi-2019.9.11-py2.py3-none-any.whl
+07	02	urllib3-1.25.6-py2.py3-none-any.whl
+07	03	idna-2.8-py2.py3-none-any.whl
+07	04	chardet-3.0.4-py2.py3-none-any.whl
+07	05	requests-2.22.0-py2.py3-none-any.whl
+08	01	soupsieve-1.9.4-py2.py3-none-any.whl
+08	02	beautifulsoup4-4.8.1-py3-none-any.whl
+09	01	selenium-3.141.0-py2.py3-none-any.whl
+10	01	PyMySQL-0.9.3-py2.py3-none-any.whl
+11	01	SQLAlchemy-1.3.10.tar.gz
+12	01 	TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
+13	01	seaborn-0.9.0-py3-none-any.whl
+14	01	retrying-1.3.3.tar.gz
+14	02	plotly-4.2.1-py2.py3-none-any.whl
+15	01	json5-0.8.5.tar.gz
+15	02	jupyterlab_server-1.0.6.tar.gz
+15	03	jupyterlab-1.2.4.tar.gz
+16	01	patsy-0.5.1.tar.gz
+16	02	statsmodels-0.10.2-cp36-none-win_amd64.whl
+17	01	python_markdown_mathjax-1.0.4-py3-none-any.whl
+18	01	xlrd-1.2.0-py2.py3-none-any.whl
+19	01	pandas_datareader-0.8.1-py2.py3-none-any.whl
+19	02	tabulate-0.8.6.tar.gz
+19	03	future-0.18.2.tar.gz
+19	04	ffn-0.3.4.tar.gz
