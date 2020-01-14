@@ -1,0 +1,31 @@
+Sub DynamicRowHeight()
+
+    Dim rown As Integer
+    Dim high As Integer
+    Dim charlen As Integer
+    Dim Lrow As Long
+    'Dim Rng As Range
+    Dim szs As Integer
+    Dim zms As Integer
+    
+    Lrow = Range("E" & Cells.Rows.Count).End(xlUp).Row - 1
+    
+    For rown = 2 To Lrow + 1
+        'Rng = Range("D" & rown)
+        Set reg1 = CreateObject("VBSCRIPT.REGEXP")
+        Set reg2 = CreateObject("VBSCRIPT.REGEXP")
+        reg1.Pattern = "\d{1}"
+        reg2.Pattern = "[A-Za-z]{1}"
+        reg1.Global = True
+        reg2.Global = True
+        Set sz = reg1.Execute(Range("E" & rown))
+        Set zm = reg2.Execute(Range("E" & rown))
+        szs = sz.Count
+        zms = zm.Count
+        charlen = Len(Range("E" & rown)) - szs / 2 - zms / 2
+        high = Application.Round(charlen / 50 + 0.5, 0) - 1
+        Rows(rown & ":" & rown).Select
+        Selection.RowHeight = 20 + high * 16
+    Next rown
+    
+End Sub
