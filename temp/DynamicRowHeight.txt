@@ -28,8 +28,123 @@ Sub DynamicRowHeight() '動態調整列高
         For ii = 0 To result1.Count - 1
             high = high + Fix(LenB(result1(ii)) * cFontSize * 0.09 / cWidth) + 1
         Next ii
-        Rows(rown & ":" & rown).Select
-        Selection.RowHeight = Application.WorksheetFunction.Min(409.5, high * cFontSize * 1.5 + 10)
+        
+        If high <= 1 Then
+        Else
+            Rows(rown & ":" & rown).Select
+            Selection.RowHeight = Application.WorksheetFunction.Min(409.5, high * cFontSize * 1.62)
+        End If
+    Next rown
+    
+End Sub
+
+Sub DynamicRowHeight2() '動態調整列高(原始高度較高時不調整)
+
+    Dim rowCnt As Long          '基準欄總row數
+    Dim rown, ii As Integer     'counter
+
+    Dim cWidth As Long          '目前欄寬
+    Dim cHeight As Long         '目前列高
+    Dim cFontSize As Integer    '目前字型大小
+    Dim high As Integer         '自動斷行的預估列數
+    
+    baseCol = InputBox("請輸入作為基準高度的欄位。挑最可能最長的欄位，輸入欄位編碼，如 E", "基準欄")
+
+    rowCnt = Range(UCase(baseCol) & Cells.Rows.Count).End(xlUp).Row - 1
+        
+    For rown = 2 To rowCnt + 1
+
+        Set reg1 = CreateObject("VBSCRIPT.REGEXP")
+        reg1.Pattern = ".+($|\n)"
+        reg1.Global = True
+        
+        Set result1 = reg1.Execute(Range(UCase(baseCol) & rown))
+        
+        With Range(UCase(baseCol) & rown)
+            cWidth = .ColumnWidth
+            cHeight = .RowHeight
+            cFontSize = .Font.Size
+        End With
+
+        high = 0
+        For ii = 0 To result1.Count - 1
+            high = high + Fix(LenB(result1(ii)) * cFontSize * 0.09 / cWidth) + 1
+        Next ii
+        
+        If high <= 1 Then
+        Else
+            Rows(rown & ":" & rown).Select
+            Selection.RowHeight = Application.WorksheetFunction.Min(409.5, Application.WorksheetFunction.Max(cHeight, high * cFontSize * 1.6))
+        End If
+    Next rown
+    
+End Sub
+
+Sub DynamicRowHeight3() '動態調整列高_可調參數(原始高度較高時不調整)
+
+    Dim rowCnt As Long          '基準欄總row數
+    Dim rown, ii As Integer     'counter
+
+    Dim cWidth As Long          '目前欄寬
+    Dim cHeight As Long         '目前列高
+    Dim cFontSize As Integer    '目前字型大小
+    Dim high As Integer         '自動斷行的預估列數
+    
+    fieldarray = Split(InputBox("請輸入作為基準高度的欄位。挑最可能最長的欄位，輸入欄位編碼，如 E", "基準欄"), ",")
+    
+    arrn = UBound(fieldarray) - LBound(fieldarray) + 1
+    
+    Select Case arrn
+        Case 0
+            MsgBox ("請至少輸入基準欄")
+        Case 1
+            baseCol = fieldarray(0)
+            wRatio = 0.09
+            hRatio = 1.6
+            hAdj = 0
+        Case 2
+            baseCol = fieldarray(0)
+            wRatio = fieldarray(1)
+            hRatio = 1.6
+            hAdj = 0
+        Case 3
+            baseCol = fieldarray(0)
+            wRatio = fieldarray(1)
+            hRatio = fieldarray(2)
+            hAdj = 0
+        Case 4
+            baseCol = fieldarray(0)
+            wRatio = fieldarray(1)
+            hRatio = fieldarray(2)
+            hAdj = fieldarray(3)
+    End Select
+    
+    rowCnt = Range(UCase(baseCol) & Cells.Rows.Count).End(xlUp).Row - 1
+        
+    For rown = 2 To rowCnt + 1
+
+        Set reg1 = CreateObject("VBSCRIPT.REGEXP")
+        reg1.Pattern = ".+($|\n)"
+        reg1.Global = True
+        
+        Set result1 = reg1.Execute(Range(UCase(baseCol) & rown))
+        
+        With Range(UCase(baseCol) & rown)
+            cWidth = .ColumnWidth
+            cHeight = .RowHeight
+            cFontSize = .Font.Size
+        End With
+
+        high = 0
+        For ii = 0 To result1.Count - 1
+            high = high + Fix(LenB(result1(ii)) * cFontSize * wRatio / cWidth) + 1
+        Next ii
+        
+        If high <= 1 Then
+        Else
+            Rows(rown & ":" & rown).Select
+            Selection.RowHeight = Application.WorksheetFunction.Min(409.5, Application.WorksheetFunction.Max(cHeight, high * cFontSize * hRatio + hAdj))
+        End If
     Next rown
     
 End Sub
