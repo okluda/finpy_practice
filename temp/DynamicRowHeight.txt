@@ -1,0 +1,35 @@
+Sub DynamicRowHeight() '動態調整列高
+
+    Dim rowCnt As Long          '基準欄總row數
+    Dim rown, ii As Integer     'counter
+
+    Dim cWidth As Long          '目前欄寬
+    Dim cFontSize As Integer    '目前字型大小
+    Dim high As Integer         '自動斷行的預估列數
+    
+    baseCol = InputBox("請輸入作為基準高度的欄位。挑最可能最長的欄位，輸入欄位編碼，如 E", "基準欄")
+
+    rowCnt = Range(UCase(baseCol) & Cells.Rows.Count).End(xlUp).Row - 1
+        
+    For rown = 2 To rowCnt + 1
+
+        Set reg1 = CreateObject("VBSCRIPT.REGEXP")
+        reg1.Pattern = ".+($|\n)"
+        reg1.Global = True
+        
+        Set result1 = reg1.Execute(Range(UCase(baseCol) & rown))
+        
+        With Range(UCase(baseCol) & rown)
+            cWidth = .ColumnWidth
+            cFontSize = .Font.Size
+        End With
+
+        high = 0
+        For ii = 0 To result1.Count - 1
+            high = high + Fix(LenB(result1(ii)) * cFontSize * 0.09 / cWidth) + 1
+        Next ii
+        Rows(rown & ":" & rown).Select
+        Selection.RowHeight = Application.WorksheetFunction.Min(409.5, high * cFontSize * 1.5 + 10)
+    Next rown
+    
+End Sub
