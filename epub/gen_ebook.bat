@@ -1,0 +1,2 @@
+pandoc --dpi=400 ch15.html ch16.html ch17.html ch18.html ch19.html ch20.html ch21.html ch22.html ch23.html ch24.html ch25.html ch26.html ch27.html ch28.html ch29.html ch30.html ch31.html ch32.html ch33.html ch34.html ch35.html -f html --mathml -t epub3 -o pyfin.epub --epub-metadata=epub-meta.txt --metadata title="金融科技實戰：Python與量化投資" --epub-cover-image="getImage.jpg"
+::pandoc --dpi=400 ch27.html -f html --mathml -t epub3 -o fipy.epub --epub-metadata=epub-meta.txt --metadata title="pyfin" --epub-cover-image="getImage.jpg"
