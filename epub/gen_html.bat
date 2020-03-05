@@ -1,0 +1,22 @@
+::pandoc -f ipynb -t html ..\\ch_15.ipynb -s --mathml -o ch15.html --metadata title="CH15" --extract-media=".\\mediadir" --dpi=200
+pandoc -f ipynb -t html ..\\ch_15.ipynb --mathml -o ch15.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_16.ipynb --mathml -o ch16.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_17.ipynb --mathml -o ch17.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_18.ipynb --mathml -o ch18.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_19.ipynb --mathml -o ch19.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_20.ipynb --mathml -o ch20.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_21.ipynb --mathml -o ch21.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_22.ipynb --mathml -o ch22.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_23.ipynb --mathml -o ch23.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_24.ipynb --mathml -o ch24.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_25.ipynb --mathml -o ch25.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_26.ipynb --mathml -o ch26.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_27.ipynb --mathml -o ch27.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_28.ipynb --mathml -o ch28.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_29.ipynb --mathml -o ch29.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_30.ipynb --mathml -o ch30.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_31.ipynb --mathml -o ch31.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_32.ipynb --mathml -o ch32.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_33.ipynb --mathml -o ch33.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_34.ipynb --mathml -o ch34.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
+pandoc -f ipynb -t html ..\\ch_35.ipynb --mathml -o ch35.html --extract-media=".\\mediadir" --dpi=400 --shift-heading-level-by=-1
